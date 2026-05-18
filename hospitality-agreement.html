@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hospitality Agreement | Citizens Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1a2332;
+    --ink-soft: #3d4a5c;
+    --paper: #fafaf7;
+    --paper-warm: #f4f1ea;
+    --rule: #d8d2c4;
+    --accent: #2f5d50;
+    --accent-soft: #e8efea;
+    --shadow: 0 1px 3px rgba(26, 35, 50, 0.06), 0 8px 24px rgba(26, 35, 50, 0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--paper-warm);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 2rem 1rem 4rem;
+  }
+
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    background: var(--paper);
+    padding: 3rem 3rem 2.5rem;
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .page::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 4px 4px 0 0;
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--rule);
+    margin-bottom: 2rem;
+  }
+
+  .org {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+
+  .subtitle {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-top: 0.5rem;
+  }
+
+  .intro {
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.5rem;
+  }
+
+  .associate-line {
+    background: var(--paper-warm);
+    padding: 1rem 1.25rem;
+    border-left: 3px solid var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .associate-line .blank {
+    display: inline-block;
+    min-width: 200px;
+    border-bottom: 1px solid var(--ink-soft);
+    margin: 0 0.25rem;
+  }
+
+  .room-info {
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 2rem 0 1rem;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    color: var(--accent);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+  }
+
+  .rules-list, .emergency-list {
+    list-style: none;
+  }
+
+  .rules-list li, .emergency-list li {
+    padding: 0.75rem 0 0.75rem 1.75rem;
+    position: relative;
+    border-bottom: 1px solid var(--rule);
+    font-size: 0.95rem;
+    color: var(--ink-soft);
+  }
+
+  .rules-list li:last-child, .emergency-list li:last-child {
+    border-bottom: none;
+  }
+
+  .rules-list li::before, .emergency-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.15rem;
+    width: 6px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+
+  .rules-list strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .inline-blank {
+    display: inline-block;
+    min-width: 120px;
+    border-bottom: 1px solid var(--ink-soft);
+  }
+
+  .emergency-section {
+    background: var(--accent-soft);
+    padding: 1.5rem 1.75rem;
+    border-radius: 4px;
+    margin: 2rem 0;
+  }
+
+  .emergency-section h2 {
+    margin-top: 0;
+    color: var(--accent);
+  }
+
+  .emergency-section li {
+    border-bottom-color: rgba(47, 93, 80, 0.15);
+  }
+
+  .signature-block {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .signature-note {
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    font-family: 'Fraunces', Georgia, serif;
+  }
+
+  .cta-section {
+    margin-top: 2.5rem;
+    padding: 2rem;
+    background: var(--ink);
+    color: var(--paper);
+    border-radius: 4px;
+    text-align: center;
+  }
+
+  .cta-section p {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 1.15rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.4;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 0.9rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    border-radius: 2px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+
+  .cta-fine-print {
+    font-size: 0.8rem;
+    opacity: 0.75;
+    margin-top: 1rem;
+    font-style: italic;
+    font-family: 'Fraunces', Georgia, serif;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 600px) {
+    body { padding: 1rem 0.5rem 3rem; }
+    .page { padding: 2rem 1.5rem 2rem; border-radius: 0; }
+    h1 { font-size: 1.75rem; }
+    .cta-section { padding: 1.5rem; }
+    .cta-button { width: 100%; padding: 1rem; }
+    .associate-line .blank { min-width: 140px; }
+  }
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <header>
+    <div class="org">Citizens Health</div>
+    <h1>Hospitality Agreement</h1>
+    <p class="subtitle">Citizens Associates</p>
+  </header>
+
+  <p class="intro">
+    This Agreement is between Citizens Medical Center, Inc. (CMCI) (<strong>"Employer"</strong>) and the undersigned Associate, for providing sleeping quarters during inclement weather or staffing needs of the organization.
+  </p>
+
+  <div class="associate-line">
+    Associate: <span class="blank"></span> (<strong>"Associate"</strong>)
+  </div>
+
+  <p class="room-info">
+    The sleeping room will be located at the <strong>North Campus</strong>. The room will be furnished with a bed and restroom. Access to the building will be added to the Associate's badge and is to be utilized by the Associate only. The rooms will be single occupancy.
+  </p>
+
+  <h2>Terms of Use</h2>
+  <ul class="rules-list">
+    <!-- Updated: Instructions for requesting a room -->
+    <li>To request the use of a room to stay overnight the associate shall <strong>fill out and submit the Google Form designed for this purpose</strong>.</li>
+
+    <li>The room will be available for short-term stays, <strong>no more than 3 nights typically</strong>. Specific arrangements may be made based on circumstances.</li>
+
+    <li>No hanging of any pictures or devices on the walls.</li>
+
+    <li>Notify <strong>Plant Operations</strong> immediately of mechanical conditions needing correction.</li>
+
+    <li>Linens shall be picked up from <strong>EVS</strong>. Upon leaving the room, the associate shall put all linens in a blue linen bag and take them to the Soiled Utility room.</li>
+
+    <li>Leave the premises clean and in the same condition as when first occupied. The associate shall take out all trash from the room and place it in the Soiled Utility room.</li>
+
+    <li><strong>No alcohol</strong> use permitted on premises.</li>
+
+    <li><strong>Absolutely no pets</strong> of any size, shape, or kind will be permitted in the rooms.</li>
+
+    <li><strong>No tobacco use</strong> or any illicit substance shall be allowed in the rooms.</li>
+
+    <li>No electrical appliances will be permitted, to include: crockpots, space heaters, electrical blankets/mattress pads. Other electrical items such as curling irons and blow dryers will need to be assessed by Plant Operations on-call <strong>no later than 6 p.m.</strong> on the day of stay.</li>
+
+    <li>Citizens Health shall not be responsible for any lost or stolen items left unattended in the rooms.</li>
+  </ul>
+
+  <div class="emergency-section">
+    <h2>Emergencies</h2>
+    <ul class="emergency-list">
+      <li>All Associates staying in North Campus shall leave their cell phone number with the Nurses Station to be able to be reached in the event of any safety concerns.</li>
+
+      <li>In the event of a <strong>fire</strong>, the Associate shall evacuate the building and report to the South Campus Nurses Station.</li>
+
+      <!-- Updated: Tornado shelter location -->
+      <li>In the event of a <strong>tornado</strong>, the associate shall report to the South Campus Nurses Station if it is safe to do so. If it is not safe, the associate shall shelter in place in the <strong>central hall between the main Nurses Station and OB</strong>.</li>
+    </ul>
+  </div>
+
+  <div class="signature-block">
+    <p class="signature-note">
+      By proceeding to the request form, you acknowledge that you have read, understood, and agree to abide by the terms of this Hospitality Agreement. Your typed name on the form will serve as your electronic signature, with the date of submission recorded automatically.
+    </p>
+  </div>
+
+  <div class="cta-section">
+    <p>Ready to request a sleep room?</p>
+    <!-- Replace the href below with your actual Google Form link -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeoK3ZOkQvQrZEahF1kajzT_fvBd__tJ4zDE3u-WgA28bN_AQ/viewform" class="cta-button" target="_blank" rel="noopener">Continue to Request Form →</a>
+    <p class="cta-fine-print">You'll be asked to confirm your agreement on the form.</p>
+  </div>
+
+  <footer>
+    Citizens Health · Colby, Kansas
+  </footer>
+
+</main>
+
+</body>
+</html>
